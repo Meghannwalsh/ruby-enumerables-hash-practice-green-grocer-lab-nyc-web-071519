@@ -1,7 +1,7 @@
 def consolidate_cart(cart)
   new_arr = []
   cart.each do |food_hash|
-    if new_hash.include?(food_hash)
+    if new_arr.include?(food_hash)
       food_hash[:count] += 1
     else
       food_hash[:count] = 1
