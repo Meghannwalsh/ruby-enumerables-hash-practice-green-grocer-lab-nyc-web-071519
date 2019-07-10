@@ -38,4 +38,4 @@ def checkout(cart, coupons)
   done
 end
 
-p consolidate_cart()
+
