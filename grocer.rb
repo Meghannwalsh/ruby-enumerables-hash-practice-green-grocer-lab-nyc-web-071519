@@ -1,8 +1,8 @@
 def consolidate_cart(cart)
   new_hash = Hash.new
-  cart.each do |k, v|
-    if !new_hash.include?(k)
-      new_hash[k] = v
+  cart.each do |food|
+    if !new_hash.include?(food)
+      new_hash += food 
       new_hash.each do |dif_k, dif_v|
       dif_v[:count] = 1
       end
@@ -14,6 +14,7 @@ def consolidate_cart(cart)
   end
   new_hash
 end
+
 
 
 def apply_coupons(cart, coupons)
@@ -40,3 +41,5 @@ def checkout(cart, coupons)
   done = apply_clearance(apply)
   done
 end
+
+p consolidate_cart()
