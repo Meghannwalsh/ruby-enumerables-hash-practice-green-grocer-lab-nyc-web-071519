@@ -5,6 +5,10 @@ def consolidate_cart(cart)
       food_hash[:count] += 1
     else
       food_hash[:count] = 1
+      new_arr << food_hash
+    end
+  end
+  new_arr
 
 end
 
