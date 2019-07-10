@@ -1,18 +1,11 @@
 def consolidate_cart(cart)
-  new_hash = Hash.new
-  cart.each do |food|
-    if !new_hash.include?(food)
-      new_hash += food 
-      new_hash.each do |dif_k, dif_v|
-      dif_v[:count] = 1
-      end
+  new_arr = []
+  cart.each do |food_hash|
+    if new_hash.include?(food_hash)
+      food_hash[:count] += 1
     else
-      new_hash.each do |diff_k, diff_v|
-        diff_v[:count] += 1
-      end
-    end
-  end
-  new_hash
+      food_hash[:count] = 1
+
 end
 
 
